@@ -10,7 +10,7 @@ import java.util.List;
 public class PartTest {
 
     @Test
-    @DisplayName("개발 파트를 반환할 수 있다.")
+    @DisplayName("개발 파트.")
     void developParts() {
         Assertions.assertThat(Part.developParts())
                 .isEqualTo(

@@ -1,6 +1,5 @@
 package com.example.seminar.dto.response.post;
 
-import com.example.seminar.domain.Category;
 import com.example.seminar.domain.Post;
 import lombok.Builder;
 
@@ -15,13 +14,11 @@ public record PostGetResponse(
         String categoryTitle
 ) {
     public static PostGetResponse of(
-            Post post,
-            Category category) {
+            Post post) {
         return PostGetResponse.builder()
                 .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
-                .categoryTitle(category.getTitle())
                 .build();
     }
 }

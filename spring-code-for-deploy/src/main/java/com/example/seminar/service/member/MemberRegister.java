@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class MemberSaver {
+public class MemberRegister {
     private final MemberJpaRepository memberJpaRepository;
 
-    public Member save(Member member) {
+    public Member register(Member member) {
         return memberJpaRepository.save(member);
     }
 
