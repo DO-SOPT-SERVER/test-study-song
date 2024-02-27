@@ -1,4 +1,4 @@
-package org.unan.week1;
+package org.song.week1;
 
 public enum CalculatorType {
     DIGITAL,
