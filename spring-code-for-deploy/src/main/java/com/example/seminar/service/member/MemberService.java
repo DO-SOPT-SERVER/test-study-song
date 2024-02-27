@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class MemberService {
 
-    private final MemberSaver memberSaver;
+    private final MemberRegister memberRegister;
     private final MemberRetriever memberRetriever;
     private final MemberUpdater memberUpdater;
     private final MemberRemover memberRemover;
@@ -36,7 +36,7 @@ public class MemberService {
     }
     @Transactional
     public String create(final MemberCreateRequest request) {
-         final Member member =  memberSaver.save(Member.builder()
+         final Member member =  memberRegister.register(Member.builder()
                  .name(request.name())
                  .nickname(request.nickname())
                  .age(request.age())

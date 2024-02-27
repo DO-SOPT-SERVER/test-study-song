@@ -20,18 +20,6 @@ import java.util.List;
 
         private final PostService postService;
 
-        @GetMapping("{postId}")
-        public ResponseEntity<PostGetResponse> getPostById(
-                @PathVariable Long postId) {
-           return ResponseEntity.ok(postService.getById(postId));
-        }
-
-        @GetMapping
-        public ResponseEntity<List<PostGetResponse>> getPosts(
-                @RequestHeader(CUSTOM_AUTH_ID) Long memberId) {
-            return ResponseEntity.ok(postService.getPosts(memberId));
-        }
-
         @PostMapping
         public ResponseEntity<Void> createPost(
                 @RequestHeader(CUSTOM_AUTH_ID) Long memberId,

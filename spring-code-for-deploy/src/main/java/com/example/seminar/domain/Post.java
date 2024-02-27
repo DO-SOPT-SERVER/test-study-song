@@ -28,9 +28,6 @@ public class Post extends BaseTimeEntity {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @Column(name = "category_id")
-    private CategoryId categoryId;
-
     @Builder
     public Post(String title, String content, Member member) {
         this.title = title;
@@ -38,12 +35,8 @@ public class Post extends BaseTimeEntity {
         this.member = member;
     }
 
-    public void updateContent(String content) {
+    public void updateContent(final String content) {
         this.content = content;
     }
 
-
-    public void addCategory(CategoryId categoryId) {
-        this.categoryId = categoryId;
-    }
 }

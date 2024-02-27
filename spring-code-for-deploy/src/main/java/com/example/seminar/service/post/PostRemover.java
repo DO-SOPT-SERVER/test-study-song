@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class PostSaver {
+public class PostRemover {
 
     private final PostJpaRepository postJpaRepository;
 
-    public Post save(Post post) {
-        return postJpaRepository.save(post);
+    public void remove(final Post post) {
+        postJpaRepository.delete(post);
     }
 }

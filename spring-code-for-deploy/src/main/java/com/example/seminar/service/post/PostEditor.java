@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class PostEditor {
-    public void updatePost() {
-
-    }
 
     public void editContent(Post post, String content) {
         post.updateContent(content);
