@@ -3,6 +3,7 @@ package com.example.seminar.domain;
 
 import com.example.seminar.common.exception.MemberException;
 import jakarta.persistence.*;
+import java.util.Objects;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -42,6 +43,7 @@ public class Member extends BaseTimeEntity {
                    SOPT sopt) {
         validateAge(age);
         validateName(name);
+        validateNickname(nickname);
         this.name = name;
         this.nickname = nickname;
         this.age = age;
@@ -54,10 +56,26 @@ public class Member extends BaseTimeEntity {
         }
     }
 
+    private void validateNickname(final String nickname) {
+        checkNull(nickname);
+    }
+
     private void validateName(final String name) {
+        checkNull(name);
        if (name.length() > MAX_LENGTH) {
             throw new MemberException("유저의 이름은 12자를 넘을 수 없습니다.");
        }
+    }
+
+    private void checkNull(final Object object){
+        if(object == null){
+            throw new MemberException("null 값이 될 수 없습니다.");
+        }
+    }
+
+    public void addPosts(Post post){
+        posts.add(post);
+        post.updateMember(this);
     }
 
     public void updateSOPT(SOPT sopt) {
