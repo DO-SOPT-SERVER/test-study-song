@@ -19,7 +19,7 @@ public class PostTest {
     @Test
     void given_정상입력경우_when_게시글등록_then_게시글등록성공(){
         // given
-        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨");
+        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨", Part.SERVER);
         Post post = Fixtures.createPost("정상제목입니다만", "정상내용입니다만", member);
 
         // when
@@ -34,7 +34,7 @@ public class PostTest {
     @Test
     void given_게시글제목3자미만경우_when_게시글등록_then_예외발생(){
         // given
-        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨");
+        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨", Part.SERVER);
 
         // when, then
         Assertions.assertThatThrownBy(() -> {

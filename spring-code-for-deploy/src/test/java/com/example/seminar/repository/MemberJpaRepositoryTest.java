@@ -2,6 +2,7 @@ package com.example.seminar.repository;
 
 import com.example.seminar.domain.Fixtures;
 import com.example.seminar.domain.Member;
+import com.example.seminar.domain.Part;
 import com.example.seminar.domain.Post;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,7 @@ public class MemberJpaRepositoryTest {
     @Test
     void given_정상입력경우_when_회원등록_then_회원등록성공() {
         // given
-        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨");
+        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨", Part.SERVER);
 
         // when
         Member savedMember = memberJpaRepository.saveAndFlush(member);
@@ -35,7 +36,7 @@ public class MemberJpaRepositoryTest {
     @Test
     void given_정상입력경우_when_회원및게시글등록_then_회원및게시글등록성공() {
         // given
-        Member member = Fixtures.createMember(11, "송민규", "송민규입니다만");
+        Member member = Fixtures.createMember(11, "송민규", "송민규입니다만", Part.SERVER);
 
         Post post1 = Post.builder()
                 .member(member)

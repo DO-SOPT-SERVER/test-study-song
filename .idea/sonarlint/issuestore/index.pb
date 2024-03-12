@@ -185,3 +185,11 @@ i
 9testtest/src/main/java/org/song/week1/CalculatorType.java,5/e/5e55b20f70f97e4a44ce66c66bd253e2d616b316
 l
 <testtest/src/main/java/org/song/week1/DigitalCalculator.java,1/3/1330ca537d17196c74e860885a0326ab07f8d434
+}
+Mspring-code-for-deploy/src/test/java/com/example/seminar/domain/Fixtures.java,7/d/7d179199392dc022f2691b06d2eede7782b50ed8
+}
+Mspring-code-for-deploy/src/test/java/com/example/seminar/domain/PostTest.java,9/5/9542c72ce9b828801bac7c88881fb7a80fa5b293
+
+`spring-code-for-deploy/src/test/java/com/example/seminar/repository/MemberJpaRepositoryTest.java,b/b/bb8c88b621e4de92db17602224b57e171f5026a0
+Ž
+^spring-code-for-deploy/src/test/java/com/example/seminar/repository/PostJpaRepositoryTest.java,b/c/bcf265df6d23262f2824de51f92c5b01a59f1f2d

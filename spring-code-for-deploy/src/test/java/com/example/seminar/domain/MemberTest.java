@@ -22,7 +22,7 @@ public class MemberTest {
     void memberSaveTest() {
 
         // given
-        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨");
+        Member member = Fixtures.createMember(25, "송민규", "송민규짱짱맨", Part.SERVER);
 
         // when
         Member savedMember = memberJpaRepository.save(member);

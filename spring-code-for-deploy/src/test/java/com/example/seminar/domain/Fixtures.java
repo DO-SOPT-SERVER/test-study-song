@@ -2,9 +2,9 @@ package com.example.seminar.domain;
 
 public class Fixtures {
 
-    public static Member createMember(int age, String name, String nickname) {
+    public static Member createMember(int age, String name, String nickname, Part part) {
         SOPT sopt = SOPT.builder()
-                .part(Part.SERVER)
+                .part(part)
                 .build();
 
         return Member.builder()
