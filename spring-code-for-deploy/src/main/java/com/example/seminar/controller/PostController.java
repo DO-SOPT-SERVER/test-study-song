@@ -24,7 +24,7 @@ import java.util.List;
         public ResponseEntity<Void> createPost(
                 @RequestHeader(CUSTOM_AUTH_ID) Long memberId,
                 @RequestBody PostCreateRequest request) {
-            URI location = URI.create("/api/post/" + postService.create(request, memberId));
+            URI location = URI.create("/api/posts/" + postService.create(request, memberId));
             return ResponseEntity.created(location).build();
         }
 

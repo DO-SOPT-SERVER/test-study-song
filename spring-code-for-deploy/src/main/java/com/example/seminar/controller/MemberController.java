@@ -1,6 +1,7 @@
 package com.example.seminar.controller;
 
 
+import com.example.seminar.common.exception.MemberException;
 import com.example.seminar.dto.request.member.MemberCreateRequest;
 import com.example.seminar.dto.request.member.MemberProfileUpdateRequest;
 import com.example.seminar.dto.response.MemberGetResponse;
@@ -22,7 +23,7 @@ public class MemberController {
 
     @PostMapping
     public ResponseEntity<Void> createMember(@RequestBody MemberCreateRequest request) {
-        URI location =  URI.create(memberService.create(request));
+        URI location = URI.create(memberService.create(request));
         return ResponseEntity.created(location).build();
     }
 
