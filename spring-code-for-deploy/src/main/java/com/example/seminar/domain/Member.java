@@ -29,6 +29,7 @@ public class Member extends BaseTimeEntity {
     private String name;
     private String nickname;
     private int age;
+    private boolean isDeleted = false;
 
     @Embedded
     private SOPT sopt;
@@ -80,5 +81,9 @@ public class Member extends BaseTimeEntity {
 
     public void updateSOPT(SOPT sopt) {
         this.sopt = sopt;
+    }
+
+    public void remove(){
+        this.isDeleted = true;
     }
 }
